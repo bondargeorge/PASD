@@ -1,0 +1,86 @@
+#result-description {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 102, 110, 0.3),
+    transparent 80%
+  );
+}
+
+#result-description h2 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+#homepage-btn {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  color: black;
+  font: bold;
+}
+
+h5 {
+  font-style: italic;
+  white-space: pre;
+}
+
+#shelf-description {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#stock-description {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#restricted-product-description {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#email-shelf {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#email-stock {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#email-restricted-product {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#date-shelf {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#date-stock {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#date-restricted-product {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+#line-separator {
+  color: blueviolet;
+  font-size: 1.5rem;
+}
+
+.container {
+  padding-top: 3rem;
+}
+
+.row {
+  padding-bottom: 5rem;
+}
+
+.col {
+  border-right: solid rgba(255, 102, 110, 0.3) 2px;
+}
+
+.btn-group {
+  text-align: center;
+}
