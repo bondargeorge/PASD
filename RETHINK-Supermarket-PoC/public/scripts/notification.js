@@ -10,7 +10,6 @@ const floorWorkerStockNotification = document.querySelector('#email-stock');
 const dateStockNotification = document.querySelector('#date-stock');
 const stockNotificationDescription = document.querySelector('#stock-description');
 
-
 const restrictedProductNotificationButton = document.querySelector("#restricted-product-notification-btn");
 const floorWorkerRestrictedProductNotification = document.querySelector('#email-restricted-product');
 const dateRestrictedProductNotification = document.querySelector('#date-restricted-product');
