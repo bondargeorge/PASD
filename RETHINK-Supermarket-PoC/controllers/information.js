@@ -1,6 +1,6 @@
 const Information = require('../models/Information');
 
-exports.createProductInformation = async function() {
+exports.createInformation = async function() {
      Information.find({ exName: 'First example' }, (err, info) => {
          if (err) return console.error(err);
          if (info) {

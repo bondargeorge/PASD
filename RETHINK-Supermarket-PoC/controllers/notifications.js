@@ -1,13 +1,14 @@
 const Notification = require('../models/Notification');
 
-exports.createShelfNotification = async function() {
-    Notification.find({ scenario: 'Shelf restock' }, (err, info) => {
+exports.createNotifications = async function() {
+    Notification.find({ exampleNo: 1 }, (err, info) => {
         if (err) return console.error(err);
         if (info) {
             console.log(info);
             console.log('This shelf notification example has already been saved to the NOTIFICATIONS collection!');
         } else {
            let shelfNotification = new Notification ({
+                exampleNo: 1,
                 floorWorkerId: 1,
                 email: 'jdoe@rehtinksupermarket.com',
                 date: '20-01-2022',
@@ -18,10 +19,35 @@ exports.createShelfNotification = async function() {
                 if (err) return console.error(err);
                 console.log(notification);
             });
+            let stockNotification = new Notification ({
+                exampleNo: 1,
+                floorWorkerId: 2,
+                email: 'wjohnsen@rehtinksupermarket.com',
+                date: '20-01-2022',
+                scenario: 'Stock reorder',
+                description: 'Low stock! New stock was ordered by the system'
+            });
+            stockNotification.save((err, notification) => {
+                if (err) return console.error(err);
+                console.log(notification);
+            });
+            let restrictedProductNotification = new Notification ({ 
+                exampleNo: 1,
+                floorWorkerId: 3,
+                email: 'mfreeman@rehtinksupermarket.com',
+                date: '20-01-2022',
+                scenario: 'Restricted product purchased',
+                description: 'An age restricted product is being bought at check-out number 5'
+           });
+            restrictedProductNotification.save((err, notification) => {
+                if (err) return console.error(err);
+                console.log(notification);
+            });
        }
    });
 }
 
+/*
 exports.createStockNotification = async function() {
     Notification.find({ scenario: 'Stock reorder' }, (err, info) => {
         if (err) return console.error(err);
@@ -66,7 +92,6 @@ exports.createRestrictedProductNotification = async function() {
    });
 }
 
-/*
 exports.getShelfNotification = async function(shelfNotification) {
     return await Notification.find({ shelfNotification });
 }

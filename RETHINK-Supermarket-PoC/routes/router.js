@@ -10,18 +10,13 @@ router.get("/", async(req, res) => {
 });
 
 router.get("/notification", async(req, res) => {
-    await NotificationsController.createShelfNotification();
-    await NotificationsController.createStockNotification();
-    await NotificationsController.createRestrictedProductNotification();
+    await NotificationsController.createNotifications();
     res.render('notifications.ejs');
 });
 
 router.get("/information", async(req, res) => {
-    await InformationController.createProductInformation();
+    await InformationController.createInformation();
     res.render('information.ejs');
-    //await InformationController.createDeliveryInformation();
-    //productInformation = await InformationController.getProductInformation();
-    
 });
 
 router.get("/payment", async(req, res) => {
